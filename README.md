@@ -1,2 +1,2 @@
 # CotizadorApp
- Cotizador de Divisas internacionales, realizado con Vue.Js y BootStrap.
+ Cotizador de Divisas internacionales, (Vue.Js y Bootstrap)
