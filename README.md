@@ -1,2 +1,2 @@
 # CotizadorApp
-SPA para cotizar divisas internacionales. Se uso Vue.js y Bootstrap. 
+ Cotizador de Divisas internacionales, realizado con Vue.Js y BootStrap.

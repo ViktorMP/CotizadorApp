@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Bootstrap y CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Cotización de Divisas online</title>
+  </head>
+  
+  <body>
+   <div id="app">
+    <div class="container">
+      <header>
+        <h1>COTIZACIÓN DE DIVISAS ONLINE</h1>
+        <h2>COTIZACIÓN DOLAR HOY - Cotización del Dólar, Euro, Real, Peso Uruguayo y Peso Chileno en Argentina.</h2>
+        <hr>
+      </header>
+     
+     <div class="row">
+         <div class="col-sm-6">
+         <label for="DE"></label>
+         <select v-model="from" name="" id="" class="form-control">
+         <option :value="moneda.id" v-for="moneda in formatearMonedas">
+           {{moneda.currencyName}}
+         </option>
+        </select>
+            </div>
+         <div class="col-sm-6">
+         <label for="A"></label>
+         <select v-model="to" name="" id="" class="form-control">
+          <option :value="moneda.id" v-for="moneda in formatearMonedas">
+           {{moneda.currencyName}}
+          </option>
+        </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+                <input v-model="cantidad" type="text"
+                class="form-control my-5"
+                placeholder="Ingresar cantidad a cotizar">
+            </div>
+           </div>
+           <div class="row">
+            <div class="col-md-12 text-center">
+             <button :disabled="desmarcadoBoton" @click="cotizarMoneda()" 
+             class="btn btn-primary">Cotizar</button>
+            </div>
+           </div>
+           <div class="row mt-5">
+            <div class="col-sm-12 text-center">
+             <h1>{{ calcularResultado }}</h1>
+            </div>
+           </div>
+        </div>
+      </div> 
+    <hr>
+      <section id="content">
+         
+        <article class="article">
+              <h2>Valores actuales en Divisas mundiales y Bitcoin online</h2>
+              <p>Con nuestro conversor de monedas puedes rápidamente y fácilmente convertir divisas a todas las divisas del mundo y precio actualizado del Bitcoin (criptomoneda).
+                <br/>Actualizaciones de las tasas de cambio cada 5 minutos. Uso rápido y confortable como una aplicación móvil.</p>
+         </article>
+
+       </section>
+
+       <hr>
+       <footer>
+         <strong>Víctor Martín Palacio &copy;2020</strong>
+        </footer>
+
+       
+    
+
+    
+    <!--Se usa jQuery, Popper.js, Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="app.js"></script>
+
+
+  </body>
+
+</html>

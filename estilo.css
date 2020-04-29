@@ -1,0 +1,17 @@
+body 
+{
+ background-color: #E6E6FA;
+ font-family: 'Roboto Mono', monospace;
+}
+
+header{
+ text-align: center;
+}
+section
+{
+ text-align: center;
+}
+
+footer{
+ text-align: center;
+}
